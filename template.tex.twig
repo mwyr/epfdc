@@ -1,0 +1,240 @@
+{% autoescape 'latex' %}
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\DeclareUnicodeCharacter{00A0}{ } % handle nbsp
+
+\usepackage[margin=2cm,nohead]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{amsmath,amsfonts}
+
+\usepackage{graphicx}
+\usepackage[space]{grffile} % in case image paths contain spaces
+
+\usepackage{ragged2e} % justify
+
+\usepackage{tabularx}
+
+\usepackage{lipsum}
+
+\usepackage[labelfont=bf]{caption}
+
+\setlength{\parskip}{\baselineskip}
+\setlength{\parindent}{0pt}
+
+% disable hyphenation, see:
+% http://tex.stackexchange.com/questions/5036/how-to-prevent-latex-from-hyphenating-the-entire-document
+\uchyph=0
+\hyphenpenalty=7500
+\exhyphenpenalty=7500
+
+% Zend_Pdf supports only PDF versions 1-1.4
+% sets the PDF version to 1.4 (i.e. before object stream compression)
+% \usepackage{pdf14} % absent in texlive-full for Ubuntu Precise
+% \pdfminorversion is not defined by XeLaTeX
+\ifdefined\pdfminorversion
+    \pdfminorversion=4
+\fi
+
+
+\newcommand{\theday}{\number\day\relax}
+\newcommand{\themonth}{\number\month\relax}
+\newcommand{\theyear}{\number\year\relax}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+%\fancyfoot[L]{
+%    \settimeformat{xxivtime}%
+%    % \settimeformat{hhmmsstime}%
+%    \footnotesize Generated on \theday\ \shortmonthname[{\themonth}] \theyear, \currenttime%
+%}
+\fancyfoot[R]{\footnotesize Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage[table,xcdraw]{xcolor}
+%\usepackage{multirow}
+
+\usepackage[absolute,overlay]{textpos}
+\usepackage{adjustbox}
+
+
+% The vertical spacing above the top floatpage float is defined by \@fptop
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
+\captionsetup{belowskip=12pt,aboveskip=24pt}
+
+\begin{document}
+
+{% set degree = submission.content['degree'] %}
+
+% l b r t
+\setlength{\tabcolsep}{0pt}
+\begin{tabularx}{\textwidth}{|@{}X|>{\columncolor{white}}l@{}|}
+    \hline
+    \cellcolor{gray!25}
+    \adjustbox{valign=t, margin=0pt 0pt 0pt 4pt}{
+        \begin{tabular}{p{0.9\linewidth}}
+            {% if submission.submittedAt %}
+                \textbf{Submission \#{{ submission.submissionNumber }}}, submitted {{ submission.submittedAt | date('j M Y, H:i') }}
+            {% else %}
+                \textbf{Not submitted}
+            {% endif %}
+        \end{tabular}
+    }
+    & \\
+    \hline
+    \adjustbox{valign=t, margin=0pt 0pt 0pt 4pt}{
+        \begin{tabular}{p{0.9\linewidth}}
+            {{ submission.content['gender_title'] }}
+            {{ submission.content['first_name'] }} {{ submission.content['last_name'] }}
+            {%- if degree -%}, {{ degree }}{%- endif -%} \\
+            {%- if submission.content['email'] -%}
+                \texttt{
+                    {{- submission.content['email'] -}}
+                } \\
+            {%- endif -%}
+            {%- if submission.content['affil'] -%}
+                {\small\textit{
+                    {{- submission.content['affil'] -}}
+                }} \\
+            {%- endif -%}
+        \end{tabular}
+    }
+    &
+    \adjustbox{valign=t, margin=0pt 0pt 0pt 0pt}{
+        \textcolor{white}{\rule[0pt]{2.73cm}{2.217cm}}
+    }
+    \\
+    \hline
+\end{tabularx}
+
+% \setlength{\TPHorizModule}{\paperwidth}\setlength{\TPVertModule}{\paperheight}
+
+\begin{textblock*}{\paperwidth}(16.573cm, 2.017cm)
+\includegraphics[width=3cm]{{ ('{' ~ logo ~ '}') | raw }}
+\end{textblock*}
+
+\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1} % Default value: 1
+\setlength{\tabcolsep}{0pt}
+
+\vspace{12pt}
+
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1}
+
+\begin{center}
+    {
+        \Large
+        \textbf{
+            {% if submission.title %}{{ submission.title }}{% else %}Lorem ipsum{% endif %}
+        }
+    }
+
+    {% if submission.content['authors2'] %}
+        {% set authors = authors(submission.content['authors2']) %}
+        {% if authors.authors|length %}
+            {%- for author in authors.authors -%}
+                {{ author.name }}
+                {%- if authors.authors|length > 1 -%}
+                    \textsuperscript{ {{- author.affil_id -}} }
+                {%- endif -%}
+                {%- if not loop.last %}, {% else %} \\ {% endif -%}
+            {%- endfor -%}
+            {% if authors.affils|length %}
+                \vspace{.25cm}
+                {%- for affil, affilId in authors.affils -%}
+                    {%- if authors.authors|length > 1 -%}
+                        \textsuperscript{ {{- affilId -}} }
+                    {%- endif -%}
+                    \textit{ {{- affil -}} } \\
+                {%- endfor -%}
+            {% endif %}
+        {% endif %}
+    {% else %}
+        {% set authors = submission.content['authors'] %}
+        {% if authors|length %}
+            {%- for author in authors -%}
+                {{ author }}{% if not loop.last %}, {% endif %}
+            {%- endfor -%}
+        {% endif %}
+    {% endif %}
+\end{center}
+
+{% set abstract = submission.content['abstract:latex'] %}
+{
+    \justify
+    {% if abstract | length %}
+        {{ abstract | raw }}
+    {% else %}
+        \lipsum[1-2]
+    {% endif %}
+}
+
+{% set keywords = submission.content['keywords'] %}
+{
+    \justify
+    \textbf{Keywords:}\hspace{.25cm}
+    {%- for keyword in keywords -%}
+        {{ keyword }}{% if not loop.last %}, {% endif %}
+    {%- else -%}
+        --
+    {%- endfor -%}
+}
+
+{% if image %}
+    {% set caption = submission.content['image_caption:latex'] %}
+    {#
+    \hrulefill
+
+    \begin{tabular}{@{}c p{11cm}@{}}
+        \raisebox{-\totalheight}{\includegraphics[width=6cm]{{ ('{' ~ image ~ '}') | raw }}}
+        &
+        \vspace{3pt} % empirically adjusted
+        \textbf{Figure 1:}
+        {% if caption %}
+            {{ caption | raw }}
+        {% else %}
+            \lipsum[3]
+        {% endif %}
+    \end{tabular}
+    #}
+    \pagebreak
+    \begin{figure}[!ht]
+        \centering
+        \includegraphics[width=12cm]{{ ('{' ~ image ~ '}') | raw }}
+    \end{figure}
+
+    \textbf{Figure 1:}
+    {% if caption %}
+        {{ caption | raw }}
+    {% else %}
+        \lipsum[3]
+    {% endif %}
+
+{% endif %}
+
+
+{% if submission.content['want_publication'] is not null %}
+    \vspace{10pt}\hrulefill\vspace{0pt}
+
+    {% if submission.content['want_publication'] %}
+        I am \textbf{interested} in publication of my research results in ``Archive of Mechanical Engineering'' following the conference.
+    {% else %}
+        I am \textbf{not interested} in publication of my research results in ``Archive of Mechanical Engineering'' following the conference.
+    {% endif %}
+
+{% endif %}
+
+
+\end{document}
+{% endautoescape %}
