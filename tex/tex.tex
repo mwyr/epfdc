@@ -11,7 +11,7 @@
 \usepackage[T1]{fontenc}
 
 \usepackage{anysize}
-\marginsize{2.08cm}{2.09cm}{0.5cm}{1.19cm}
+\marginsize{1.9cm}{1.9cm}{1.9cm}{1.9cm}
 
 \usepackage{graphicx} %%For loading graphic files
 %\usepackage{subfigure}
@@ -56,6 +56,8 @@
 
 
 \usepackage{fixltx2e}
+\usepackage{etoolbox}
+\usepackage{wrapfig}
 
 % ========== table of contents ==========
 \usepackage{tocloft}
@@ -67,17 +69,55 @@
 %
 \newcounter{Abstractcounter}
 
-\newcommand{\myabstract}[3]
+\newcommand{\myabstract}[5]
 {
-	\stepcounter{Abstractcounter}
-	%\arabic{Abstractcounter}
-	\addcontentsline{toc}{section}{\arabic{Abstractcounter} #1 \\ \normalfont\small #2 }
-	{\centering{ \large{#1} } \\ % title
+	\stepcounter{Abstractcounter} % increase of counter
+	% formatting table of content entry
+	\addcontentsline{toc}{section} 
+	{ \arabic{Abstractcounter} #1 \\ 
+		\normalfont\small #2 }
+	% end -- formatting table of content entry
+	
+	
+	%\begin{samepage}
+	\begin{minipage}[c]{\textwidth}
+	{		\centering{ \textsc{ \textbf{ \large{\arabic{Abstractcounter} #1}  } } } \\ % title
 	}
-	{\centering{ #2 } \\ %author
+	{		\centering{ \textbf{ #2 } } \\ %author
 	}
 	\input{#3} %content
+	\\
+	%insert graphic file
+	\ifstrempty{#4}{}%
+	{%if string is not empty
+	
+		%\begin{figure}[h!]%
+			%\centering
+			%\includegraphics[height=5cm]{#4}%
+			%\caption{#5}
+		%\end{figure}
+		%\begin{figure}[h!]
+			%\begin{minipage}[c]{0.3\textwidth}
+				%\includegraphics[width=\textwidth]{#4}
+			%\end{minipage}\hfill
+			%\begin{minipage}[c]{0.67\textwidth}
+				%\caption{#5}
+			%\end{minipage}
+		%\end{figure}
+	\begin{minipage}[c]{5cm}
+		\includegraphics[width=5cm,height=5cm,keepaspectratio]{#4}
+	\end{minipage}
+	\begin{minipage}[c]{10cm}
+		{\textbf{Figure:} #5}
+	\end{minipage}
+	
+	}
+	
+	\end{minipage}
+	%\end{samepage}
+	
 	%\newpage
+	\vspace{.5cm}
 	
 }
 

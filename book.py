@@ -30,7 +30,18 @@ def run(data):
             with open('tex/'+contentfile,'wt') as file:
                 print(content, file=file)
             
-            lineout='\myabstract{'+title+'}{'+name+'}{'+ contentfile + '}'
+            imagefile = entry.get('image',"")
+            if imagefile is None:
+                imagefile=''
+            imagecaption = entry['image_caption']
+            if imagecaption is None:
+                imagecaption=''
+            
+            lineout='\myabstract{'+title+'}'
+            lineout=lineout + '{'+name+'}'
+            lineout=lineout + '{'+ contentfile + '}'
+            lineout=lineout + '{'+ imagefile + '}'
+            lineout=lineout + '{'+ imagecaption + '}'
             print(lineout,file=fout)
         
     
