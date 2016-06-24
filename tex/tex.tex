@@ -1,0 +1,122 @@
+
+% ========== HEADER ==========
+
+%\documentclass[a4paper,twoside,10pt]{report}
+\documentclass[11pt,a4paper]{article}
+%\documentclass[letterpaper,10pt]{article}
+
+\usepackage[polish,english]{babel}
+\usepackage[utf8]{inputenc}
+%\usepackage[cp1250]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{anysize}
+\marginsize{2.08cm}{2.09cm}{0.5cm}{1.19cm}
+
+\usepackage{graphicx} %%For loading graphic files
+%\usepackage{subfigure}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\numberwithin{equation}{section}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{fancyhdr} %%Fancy headings
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{lastpage}
+\usepackage{hyperref}
+
+\usepackage{float}
+
+% ========== fancy header page definition ==========
+\fancypagestyle{plain}{
+	\setlength{\headheight}{36pt}
+	\fancyhf{}
+	\fancyhead[C]{
+	8th European Postgradute Fluid Dynamics Conference \\
+	Book of Abstracts \\ Warsaw, July 6th-9th, 2016 }
+	\fancyhead[L]{ \includegraphics[height=1.5cm]{../logo.png} }
+	%\fancyhead[R]{ \includegraphics[height=1.5cm]{logo/umrida_logo.jpg} }
+	\fancyfoot[C]{ Page {\thepage} of \pageref{LastPage} }
+}
+
+% ========== math commands definition ==========
+\newcommand{\pr}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\rr}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\ppr}[1]{\frac{\partial}{\partial^2 #1}}
+\newcommand{\rpr}[2]{\frac{\partial #1}{\partial^2 #2}}
+\newcommand{\prr}[2]{\frac{\partial}{\partial #1\partial #2}}
+\newcommand{\rrr}[3]{\frac{\partial #1}{\partial #2\partial #3}}
+\newcommand{\Rrr}[3]{\frac{\partial^2 #1}{\partial #2\partial #3}}
+\newcommand{\E}{\mathrm{E}}
+
+% ========== table of contents ==========
+\usepackage{tocloft}
+
+%\newcommand{tableofabstracts}{List of Abstracts}
+
+
+% ========== abstract entry definition ==========
+%
+\newcounter{Abstractcounter}
+
+\newcommand{\myabstract}[3]
+{
+	\stepcounter{Abstractcounter}
+	%\arabic{Abstractcounter}
+	\addcontentsline{toc}{section}{\arabic{Abstractcounter} #1 \\ \normalfont\small #2 }
+	{\centering{ \large{#1} } \\ % title
+	}
+	{\centering{ #2 } \\ %author
+	}
+	\input{#3} %content
+	%\newpage
+}
+
+
+
+\makeatletter
+\@addtoreset{section}{myabstract}
+\makeatother
+\newlength\mylen
+\renewcommand\thepart{\arabic{Abstract}}
+\renewcommand\cftpartpresnum{Part~}
+\settowidth\mylen{\bfseries\cftpartpresnum\cftpartaftersnum}
+\addtolength\cftpartnumwidth{\mylen}
+
+
+% ========== DOCUMENT ==========
+\begin{document}
+\title{Book of abstracts}
+\author{8th~EPFDC Organising Committee}
+\maketitle
+
+\tableofcontents
+
+\input{myabstracts.tex}
+%\myabstract{tytul}{autor}{ab1.tex}
+%\myabstract{tytul drugi}{drugi autor}{ab1.tex}
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
