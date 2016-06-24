@@ -10,6 +10,30 @@ def readabstracts(fname):
     return data
     
     
+    
+def run(data):
+#    for i,abstract in enumerate(data):
+#        print(i, abstract['registration_status'])
+    import codecs
+    
+    fname = 'tex/myabstracts.tex'
+    with codecs.open(fname, 'w',encoding='utf8') as fout:
+        for i,entry in enumerate(data):
+            first_name = entry['first_name']
+            last_name = entry['last_name']
+            title = entry['title']
+            content = entry['content']
+            
+            name = first_name + ' ' + last_name
+            
+            contentfile = 'abstract_content/ab' + str(i).zfill(3) + '.tex'
+            with open('tex/'+contentfile,'wt') as file:
+                print(content, file=file)
+            
+            lineout='\myabstract{'+title+'}{'+name+'}{'+ contentfile + '}'
+            print(lineout,file=fout)
+        
+    
 if __name__ == '__main__':
     print('###############################')
     print('# 8th European Postgraduate   #')
@@ -19,3 +43,4 @@ if __name__ == '__main__':
     
     data = readabstracts('abstracts.json')
     
+    run(data)

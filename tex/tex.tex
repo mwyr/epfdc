@@ -54,6 +54,9 @@
 \newcommand{\Rrr}[3]{\frac{\partial^2 #1}{\partial #2\partial #3}}
 \newcommand{\E}{\mathrm{E}}
 
+
+\usepackage{fixltx2e}
+
 % ========== table of contents ==========
 \usepackage{tocloft}
 
@@ -75,6 +78,7 @@
 	}
 	\input{#3} %content
 	%\newpage
+	
 }
 
 
@@ -91,11 +95,14 @@
 
 % ========== DOCUMENT ==========
 \begin{document}
+\pagestyle{plain}
+
 \title{Book of abstracts}
 \author{8th~EPFDC Organising Committee}
 \maketitle
 
 \tableofcontents
+\newpage 
 
 \input{myabstracts.tex}
 %\myabstract{tytul}{autor}{ab1.tex}
