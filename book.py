@@ -19,6 +19,9 @@ def run(data):
     fname = 'tex/myabstracts.tex'
     with codecs.open(fname, 'w',encoding='utf8') as fout:
         for i,entry in enumerate(data):
+            print('Processing abstract: ', i)
+            opts={}
+            
             first_name = entry['first_name']
             last_name = entry['last_name']
             title = entry['title']
@@ -27,21 +30,39 @@ def run(data):
             name = first_name + ' ' + last_name
             
             contentfile = 'abstract_content/ab' + str(i).zfill(3) + '.tex'
-            with open('tex/'+contentfile,'wt') as file:
+            with codecs.open('tex/'+contentfile,'w',encoding='utf8') as file:
                 print(content, file=file)
             
             imagefile = entry.get('image',"")
             if imagefile is None:
                 imagefile=''
+            
             imagecaption = entry['image_caption']
             if imagecaption is None:
                 imagecaption=''
+            else:
+                captionfile = 'caption/cap' + str(i).zfill(3)+'.tex'
+                with codecs.open('tex/'+captionfile,'w',encoding='utf8') as file:
+                    print(imagecaption, file=file)
+                opts['captionfile'] = captionfile
+
             
-            lineout='\myabstract{'+title+'}'
-            lineout=lineout + '{'+name+'}'
-            lineout=lineout + '{'+ contentfile + '}'
-            lineout=lineout + '{'+ imagefile + '}'
-            lineout=lineout + '{'+ imagecaption + '}'
+            opts['title'] = title
+            opts['author'] = name
+            opts['contentfile'] = contentfile
+            opts['image'] = imagefile
+            
+            options = ''
+            for key in opts:
+                options = options + key + '=' + opts[key] +','
+            options = options[:-1] #get rid of trailing comma
+            
+            lineout='\myabstract['+options+']{}'
+#            lineout='\myabstract{'+title+'}'
+#            lineout=lineout + '{'+name+'}'
+#            lineout=lineout + '{'+ contentfile + '}'
+#            lineout=lineout + '{'+ imagefile + '}'
+#            lineout=lineout + '{'+ imagecaption + '}'
             print(lineout,file=fout)
         
     
