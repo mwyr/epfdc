@@ -44,17 +44,6 @@
 	\fancyfoot[C]{ Page {\thepage} of \pageref{LastPage} }
 }
 
-% ========== math commands definition ==========
-\newcommand{\pr}[1]{\frac{\partial}{\partial #1}}
-\newcommand{\rr}[2]{\frac{\partial #1}{\partial #2}}
-\newcommand{\ppr}[1]{\frac{\partial}{\partial^2 #1}}
-\newcommand{\rpr}[2]{\frac{\partial #1}{\partial^2 #2}}
-\newcommand{\prr}[2]{\frac{\partial}{\partial #1\partial #2}}
-\newcommand{\rrr}[3]{\frac{\partial #1}{\partial #2\partial #3}}
-\newcommand{\Rrr}[3]{\frac{\partial^2 #1}{\partial #2\partial #3}}
-\newcommand{\E}{\mathrm{E}}
-
-
 \usepackage{fixltx2e}
 \usepackage{etoolbox}
 \usepackage{wrapfig}
@@ -62,142 +51,9 @@
 % ========== table of contents ==========
 \usepackage{tocloft}
 
-%\newcommand{tableofabstracts}{List of Abstracts}
-
-
 % ========== abstract entry definition ==========
-%
 \newcounter{Abstractcounter}
 
-
-
-\usepackage{pgfkeys}
-\pgfkeys{
-	/cfg/.is family, /cfg,
-	title/.estore in = \cfgTitle,
-	author/.estore in = \cfgAuthor,
-	image/.estore in = \cfgImage,
-	captionfile/.estore in = \cfgCaptionFile,
-	contentfile/.estore in = \cfgContentFile,
-}
-
-\newcommand{\myabstract}[2][]
-{
-	\pgfkeys{/cfg , #1}%
-	
-	\stepcounter{Abstractcounter} % increase of counter
-	% formatting table of content entry
-	\addcontentsline{toc}{section} 
-	{ \arabic{Abstractcounter} \cfgTitle \\ 
-		\normalfont\small \cfgAuthor }
-	% end -- formatting table of content entry
-	
-	
-	%\begin{samepage}
-	\begin{minipage}[c]{\textwidth}
-	{		\centering{ \textsc{ \textbf{ \large{\arabic{Abstractcounter} \cfgTitle}  } } } \\ % title
-	}
-	{		\centering{ \textbf{ \cfgAuthor } } \\ %author
-	}
-	\input{ \cfgContentFile } %content
-	\\
-	%insert graphic file
-	\ifstrempty{\cfgImage}{}%
-	{%if string is not empty
-	
-		%\begin{figure}[h!]%
-			%\centering
-			%\includegraphics[height=5cm]{#4}%
-			%\caption{#5}
-		%\end{figure}
-		%\begin{figure}[h!]
-			%\begin{minipage}[c]{0.3\textwidth}
-				%\includegraphics[width=\textwidth]{#4}
-			%\end{minipage}\hfill
-			%\begin{minipage}[c]{0.67\textwidth}
-				%\caption{#5}
-			%\end{minipage}
-		%\end{figure}
-		\begin{minipage}[c]{5cm}
-			\includegraphics[width=5cm,height=5cm,keepaspectratio]{\cfgImage}
-		\end{minipage}
-		\begin{minipage}[c]{10cm}
-			{\textbf{Figure:} \input{\cfgCaptionFile} }
-		\end{minipage}
-	
-	}
-	
-	\end{minipage}
-	%\end{samepage}
-	
-	%\newpage
-	\vspace{.5cm}
-	
-}
-
-
-%
-%\newcommand{\myabstract}[5]
-%{
-	%\stepcounter{Abstractcounter} % increase of counter
-	%
-	 %formatting table of content entry
-	%\addcontentsline{toc}{section} 
-	%{ \arabic{Abstractcounter} #1 \\ 
-		%\normalfont\small #2 }
-	 %end -- formatting table of content entry
-	%
-	%
-	%\begin{samepage}
-	%\begin{minipage}[c]{\textwidth}
-	%{		\centering{ \textsc{ \textbf{ \large{\arabic{Abstractcounter} #1}  } } } \\ % title
-	%}
-	%{		\centering{ \textbf{ #2 } } \\ %author
-	%}
-	%\input{#3} %content
-	%\\
-	%\ifstrempty{#4}{}%
-	%{%if string is not empty
-		%\begin{figure}[h!]%
-			%\centering
-			%\includegraphics[height=5cm]{#4}%
-			%\caption{#5}
-		%\end{figure}
-		%\begin{figure}[h!]
-			%\begin{minipage}[c]{0.3\textwidth}
-				%\includegraphics[width=\textwidth]{#4}
-			%\end{minipage}\hfill
-			%\begin{minipage}[c]{0.67\textwidth}
-				%\caption{#5}
-			%\end{minipage}
-		%\end{figure}
-	%\begin{minipage}[c]{5cm}
-		%\includegraphics[width=5cm,height=5cm,keepaspectratio]{#4}
-	%\end{minipage}
-	%\begin{minipage}[c]{10cm}
-		%{\textbf{Figure:} #5}
-	%\end{minipage}
-	%
-	%}
-	%
-	%\end{minipage}
-	%\end{samepage}
-	%
-	%\newpage
-	%\vspace{.5cm}
-	%
-%}
-
-
-
-\makeatletter
-\@addtoreset{section}{myabstract}
-\makeatother
-\newlength\mylen
-\renewcommand\thepart{\arabic{Abstract}}
-\renewcommand\cftpartpresnum{Part~}
-\settowidth\mylen{\bfseries\cftpartpresnum\cftpartaftersnum}
-\addtolength\cftpartnumwidth{\mylen}
 
 
 % ========== DOCUMENT ==========
@@ -211,6 +67,7 @@
 \tableofcontents
 \newpage 
 
+%\input{aaa.tex}
 \input{myabstracts.tex}
 %\myabstract{tytul}{autor}{ab1.tex}
 %\myabstract{tytul drugi}{drugi autor}{ab1.tex}

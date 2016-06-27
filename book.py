@@ -10,6 +10,47 @@ def readabstracts(fname):
     return data
     
     
+def fill_template(opts):
+    title = opts['title']    
+    author = opts['author']
+    contentfile = opts['contentfile']
+    
+    buffer = """
+    \stepcounter{Abstractcounter} %counter increase
+    % formatting table of contents entry    
+    \\addcontentsline{toc}{section} 
+    { \\arabic{Abstractcounter} """ + title + """ \\\\
+    \\normalfont\small """ + author + """ }
+    % end -- formatting table of contents entry    
+    
+    \\begin{minipage}[c]{\\textwidth}
+    { \centering{ \\textsc{ \\textbf{ \large{\\arabic{Abstractcounter} """ + title +"""}} } } \\\\    
+    }
+    { \centering{ \\textbf{ """ + author + """}} \\\\  
+    }
+    \\input{ """ + contentfile + """}
+    \\\\
+    """
+    
+    if 'image' in opts:
+        imagefile = opts['image']
+        captionfile = opts['captionfile']
+        
+        buffer = buffer + """
+        \\begin{minipage}[c]{5cm}
+            \\includegraphics[width=5cm,height=5cm,keepaspectratio]{""" + imagefile + """}
+        \\end{minipage}
+        \\begin{minipage}[c]{10cm}
+            { \\textbf{Figure: } \\input{""" + captionfile + """ }}
+        \\end{minipage}
+        """
+    
+    buffer = buffer + """
+    \\end{minipage}
+    
+    \\vspace{.5cm}
+    """
+    return buffer
     
 def run(data):
 #    for i,abstract in enumerate(data):
@@ -24,48 +65,39 @@ def run(data):
             
             first_name = entry['first_name']
             last_name = entry['last_name']
-            title = entry['title']
-            content = entry['content']
-            
             name = first_name + ' ' + last_name
+            opts['author'] = name
             
+            title = entry['title']
+            opts['title'] = title
+            
+            content = entry['content']
             contentfile = 'abstract_content/ab' + str(i).zfill(3) + '.tex'
             with codecs.open('tex/'+contentfile,'w',encoding='utf8') as file:
                 print(content, file=file)
+            opts['contentfile'] = contentfile
             
-            imagefile = entry.get('image',"")
-            if imagefile is None:
-                imagefile=''
+            image = entry.get('image',"")
+            if image is not None:
+                opts['image'] = image
             
             imagecaption = entry['image_caption']
-            if imagecaption is None:
-                imagecaption=''
-            else:
+            if imagecaption is not '':
                 captionfile = 'caption/cap' + str(i).zfill(3)+'.tex'
                 with codecs.open('tex/'+captionfile,'w',encoding='utf8') as file:
-                    print(imagecaption, file=file)
+                    print(imagecaption, file=file,end='')
                 opts['captionfile'] = captionfile
 
+            t= fill_template(opts)
+            outfile = 'out/out' + str(i).zfill(3) + '.tex'
+            with codecs.open('tex/'+outfile,'w',encoding='utf8') as file:
+                print(t,file=file)
+                
+            inputcmd = '\input{'+ outfile +'}'
+            print(inputcmd,file=fout)
+
             
-            opts['title'] = title
-            opts['author'] = name
-            opts['contentfile'] = contentfile
-            opts['image'] = imagefile
             
-            options = ''
-            for key in opts:
-                options = options + key + '=' + opts[key] +','
-            options = options[:-1] #get rid of trailing comma
-            
-            lineout='\myabstract['+options+']{}'
-#            lineout='\myabstract{'+title+'}'
-#            lineout=lineout + '{'+name+'}'
-#            lineout=lineout + '{'+ contentfile + '}'
-#            lineout=lineout + '{'+ imagefile + '}'
-#            lineout=lineout + '{'+ imagecaption + '}'
-            print(lineout,file=fout)
-        
-    
 if __name__ == '__main__':
     print('###############################')
     print('# 8th European Postgraduate   #')
