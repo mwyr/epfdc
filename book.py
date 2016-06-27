@@ -11,9 +11,11 @@ def readabstracts(fname):
     
     
 def fill_template(opts):
-    title = opts['title']    
-    author = opts['author']
+    title = opts['title']
     contentfile = opts['contentfile']
+    author = opts['author']
+#    authors = opts['coauthors']
+#    affils = opts['affils']
     
     buffer = """
     \stepcounter{Abstractcounter} %counter increase
@@ -25,10 +27,33 @@ def fill_template(opts):
     
     \\begin{minipage}[c]{\\textwidth}
     { \centering{ \\textsc{ \\textbf{ \large{\\arabic{Abstractcounter} """ + title +"""}} } } \\\\    
-    }
-    { \centering{ \\textbf{ """ + author + """}} \\\\  
-    }
-    \\input{ """ + contentfile + """}
+    } 
+    """
+    
+#    buffer = buffer + """  { \centering{ \\textbf{ """ + author + """}} \\\\  
+#    } """
+    
+    names = ''
+    for i,val in enumerate( opts['authors']):
+        affilid = opts['authorsaffilid'][i]
+        names = names + val + str(affilid+1) + ', '
+    
+    buffer = buffer + """  { \centering{ \\textbf{ """ + names + """}} \\\\  
+    } 
+    """
+    
+    # todo: handle single affiliation properly (without numbers)
+    affil = ''
+    for i,val in enumerate( opts['affilname']):
+        affil = str(i+1) + ' ' + val + ', '
+        buffer = buffer + """  { \centering{ { """ + affil + """}} \\\\  
+    } 
+    """
+    
+    
+    
+    
+    buffer = buffer + """ \\input{ """ + contentfile + """}
     \\\\
     """
     
@@ -60,6 +85,7 @@ def run(data):
     fname = 'tex/myabstracts.tex'
     with codecs.open(fname, 'w',encoding='utf8') as fout:
         for i,entry in enumerate(data):
+#        for i,entry in enumerate(data[0:1]):
             print('Processing abstract: ', i)
             opts={}
             
@@ -68,6 +94,18 @@ def run(data):
             name = first_name + ' ' + last_name
             opts['author'] = name
             
+            authors = []
+            authorsaffilid = []
+            for j,val in enumerate( entry['authors'] ):
+                authors.append( val['name'] )
+                curr_affilid = val['affil_id']
+                authorsaffilid.append( curr_affilid )
+            
+            opts['authors'] = authors
+            opts['authorsaffilid'] = authorsaffilid
+            opts['affilname'] = entry['affils']
+            print(opts['affilname'])
+                
             title = entry['title']
             opts['title'] = title
             
