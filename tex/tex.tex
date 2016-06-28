@@ -28,7 +28,7 @@
 \usepackage{float}
 \usepackage{pdfpages}
 \usepackage{lastpage}
-\usepackage{hyperref}
+\usepackage[hyperfootnotes=false]{hyperref}
 
 \usepackage{float}
 
@@ -55,6 +55,14 @@
 \newcounter{Abstractcounter}
 
 
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
 
 % ========== DOCUMENT ==========
 \begin{document}

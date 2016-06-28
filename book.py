@@ -14,6 +14,7 @@ def fill_template(opts):
     title = opts['title']
     contentfile = opts['contentfile']
     author = opts['author']
+    email = opts['email']
 #    authors = opts['coauthors']
 #    affils = opts['affils']
     
@@ -21,14 +22,16 @@ def fill_template(opts):
     \stepcounter{Abstractcounter} %counter increase
     % formatting table of contents entry    
     \\addcontentsline{toc}{section} 
-    { \\arabic{Abstractcounter} """ + title + """ \\\\
+    { \\arabic{Abstractcounter} \\textsc{""" + title + """} \\\\
     \\normalfont\small """ + author + """ }
-    % end -- formatting table of contents entry    
-    
-    \\begin{minipage}[c]{\\textwidth}
-    { \centering{ \\textsc{ \\textbf{ \large{\\arabic{Abstractcounter} """ + title +"""}} } } \\\\    
-    } 
+    % end -- formatting table of contents entry 
     """
+    
+#    buffer = buffer + """
+#    \\begin{minipage}[c]{\\textwidth}
+#    { \centering{ \\textsc{ \\textbf{ \large{\\arabic{Abstractcounter} """ + title +"""}} } } \\\\    
+#    } 
+#    """
     
 #    buffer = buffer + """  { \centering{ \\textbf{ """ + author + """}} \\\\  
 #    } """
@@ -36,44 +39,62 @@ def fill_template(opts):
     names = ''
     for i,val in enumerate( opts['authors']):
         affilid = opts['authorsaffilid'][i]
-        names = names + val + str(affilid+1) + ', '
+        
+        names = names + val
+        
+        if ( len( opts['affilname'] ) != 1):
+            texsuperscript = '\\textsuperscript'
+            names = names + texsuperscript + str(affilid+1) 
+        names = names + ', '
+        
+    names = names[:-2] #cutting out ending comma 
     
-    buffer = buffer + """  { \centering{ \\textbf{ """ + names + """}} \\\\  
-    } 
+    buffer = buffer + """  { \centering{ \\textbf{ """ + names + """}} \\\\ } 
     """
-    
+    buffer = buffer + '\\blfootnote{Corresponding author: ' + author + ', '
+    buffer = buffer + 'e-mail: \href{mailto:' + email +'}{'+email.replace('_','\_') +'} }\n'
     # todo: handle single affiliation properly (without numbers)
+        
     affil = ''
     for i,val in enumerate( opts['affilname']):
-        affil = str(i+1) + ' ' + val + ', '
-        buffer = buffer + """  { \centering{ { """ + affil + """}} \\\\  
-    } 
+        if ( len( opts['affilname'] ) != 1):
+                affil = str(i+1) + ' '
+        affil = affil + val 
+        buffer = buffer + """  { \centering{ { """ + affil + """}} \\\\ } 
     """
     
+    buffer = buffer + '\\vspace{.3cm} \n' #extra space after affiliation data
     
-    
-    
-    buffer = buffer + """ \\input{ """ + contentfile + """}
-    \\\\
+    buffer = buffer + """ \\input{ """ + contentfile + """}    \\\\
     """
     
     if 'image' in opts:
         imagefile = opts['image']
         captionfile = opts['captionfile']
         
-        buffer = buffer + """
-        \\begin{minipage}[c]{5cm}
-            \\includegraphics[width=5cm,height=5cm,keepaspectratio]{""" + imagefile + """}
-        \\end{minipage}
-        \\begin{minipage}[c]{10cm}
-            { \\textbf{Figure: } \\input{""" + captionfile + """ }}
-        \\end{minipage}
-        """
+        sidebyside = True
+        if ( sidebyside ):
+            buffer = buffer + """
+            {
+            
+            \\begin{minipage}[c]{\\textwidth}
+                \centering
+                \\includegraphics[width=7cm,height=7cm,keepaspectratio]{""" + imagefile + """}
+            
+                { \\textbf{Figure: }\\input{""" + captionfile + """ }}
+            \\end{minipage}
+            
+            }
+            """
+
+#    buffer = buffer + """
+#    \\end{minipage}
+#    """
+    
     
     buffer = buffer + """
-    \\end{minipage}
-    
     \\vspace{.5cm}
+    \\newpage
     """
     return buffer
     
@@ -104,7 +125,7 @@ def run(data):
             opts['authors'] = authors
             opts['authorsaffilid'] = authorsaffilid
             opts['affilname'] = entry['affils']
-            print(opts['affilname'])
+#            print(opts['affilname'])
                 
             title = entry['title']
             opts['title'] = title
@@ -126,6 +147,7 @@ def run(data):
                     print(imagecaption, file=file,end='')
                 opts['captionfile'] = captionfile
 
+            opts['email'] = entry['email']
             t= fill_template(opts)
             outfile = 'out/out' + str(i).zfill(3) + '.tex'
             with codecs.open('tex/'+outfile,'w',encoding='utf8') as file:
