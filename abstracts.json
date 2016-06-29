@@ -1,51 +1,5 @@
 [
     {
-        "abstract_number": 1,
-        "abstract_submitted": "2016-01-21 17:55:35",
-        "abstract_status": "accepted:poster",
-        "registration_number": 31,
-        "registration_submitted": "2016-04-14 11:00:28",
-        "registration_status": "payment_accepted",
-        "gender_title": "Mr.",
-        "first_name": "Seyyed M.M.",
-        "last_name": "Sabet",
-        "email": "smm.sabet@gmail.com",
-        "degree": "Ph.D.",
-        "org": "University of Minho",
-        "dept": "MIT Portugal Program",
-        "country": "Portugal",
-        "country_code": "PT",
-        "is_poster": true,
-        "is_oral": false,
-        "want_publication": true,
-        "title": "Study of Water Droplet Expulsion from Solid Surfaces for Drying Purposes",
-        "keywords": [
-            "Wall-bounded flows",
-            "Applied fluid dynamics",
-            "Droplet detachment"
-        ],
-        "authors": [
-            {
-                "name": "Seyyed M. M. Sabet",
-                "affil": "MIT Portugal program, University of Minho, Campus de Azurém, 4800-058 Guimarães, Portugal",
-                "affil_id": 0
-            },
-            {
-                "name": "J.M. Nóbrega",
-                "affil": "Institute for Polymers and Composites (IPC/i3N), University of Minho, 4800-058 Guimarães, Portugal",
-                "affil_id": 1
-            }
-        ],
-        "affils": [
-            "MIT Portugal program, University of Minho, Campus de Azurém, 4800-058 Guimarães, Portugal",
-            "Institute for Polymers and Composites (IPC/i3N), University of Minho, 4800-058 Guimarães, Portugal"
-        ],
-        "content": "The water droplet detachment from solid surfaces is a phenomenon observed in various fields of engineering, and is of importance in those mainly involving draining or drying. This analytical work describes the analysis and development of a criterion for water droplet expulsion from horizontal solid surfaces by means of calculating the resultant shear stress caused by the airflow. The proposed model is expected to contribute to the knowledge of water removal, mainly in drying systems. The model presented here may be applied in different applications such as car washing machines, hair dryers and/or drainage systems.",
-        "image": "images/001.jpg",
-        "image_squared": "images/001-squared.jpg",
-        "image_caption": "Seyyed M. M. Sabet is a Materials Eningeer whoobtained his PhD in Engineering Design and Advanced Manufacturing at MIT Portugal program, University of Minho, Portugal in Sep 2015. He is now working in collaboration with Bosch."
-    },
-    {
         "abstract_number": 5,
         "abstract_submitted": "2016-01-22 11:44:02",
         "abstract_status": "accepted:oral",
@@ -2166,56 +2120,6 @@
         "image_caption": "Results obtained for flywheel domain, particle coloured by diameter {[}\\(m\\){]}. Small particles show an outer side dominance whilst bigger particles tend to leave the domain near the inner-middle side."
     },
     {
-        "abstract_number": 65,
-        "abstract_submitted": "2016-02-02 16:55:13",
-        "abstract_status": "accepted:poster",
-        "registration_number": 87,
-        "registration_submitted": "2016-05-13 17:03:00",
-        "registration_status": "payment_accepted",
-        "gender_title": "Mr.",
-        "first_name": "Rodrigo",
-        "last_name": "Pereira",
-        "email": "rodmpereira@gmail.com",
-        "degree": "Ph.D.",
-        "org": "Federal University of Rio de Janeiro",
-        "dept": "Fluid Dynamics Interdisciplinary Group",
-        "country": "Brazil",
-        "country_code": "BR",
-        "is_poster": true,
-        "is_oral": false,
-        "want_publication": false,
-        "title": "A dissipative random velocity field for fully developed fluid turbulence",
-        "keywords": [
-            "Turbulence"
-        ],
-        "authors": [
-            {
-                "name": "Rodrigo M. Pereira",
-                "affil": "Federal University of Rio de Janeiro, Brazil",
-                "affil_id": 0
-            },
-            {
-                "name": "Christophe Garban",
-                "affil": "University of  Lyon, France",
-                "affil_id": 1
-            },
-            {
-                "name": "Laurent Chevillard",
-                "affil": "ENS de Lyon, France",
-                "affil_id": 2
-            }
-        ],
-        "affils": [
-            "Federal University of Rio de Janeiro, Brazil",
-            "University of  Lyon, France",
-            "ENS de Lyon, France"
-        ],
-        "content": "We investigate the properties,throughnumerical and analytical results, of a stochastic model for the velocity field of incompressible, homogeneous and isotropic turbulence. A key step in the construction of this model is the introduction of some aspects of the vorticity stretching mechanism. An additional phenomenological step toinclude the long range correlated nature of turbulence makes this model dependent on a single free parameter \\(\\gamma \\), estimated from experimental measurements. We confirm the realism of the model regarding the geometry of the velocity gradient tensor, the power-law behaviour of structure functions (with intermittent corrections) and the existence of energy transfers across scales. We quantify the dependence of these properties on \\(\\gamma \\) and derive the spectrum of exponents of the structure functions in a simplified case. A perturbative expansion in \\(\\gamma \\) shows that energy transfers indeed take place, justifying the dissipative nature of the field.",
-        "image": null,
-        "image_squared": null,
-        "image_caption": ""
-    },
-    {
         "abstract_number": 66,
         "abstract_submitted": "2016-02-02 20:55:52",
         "abstract_status": "accepted:oral",
@@ -4248,62 +4152,6 @@
             "Warmia and Mazury University in Olsztyn"
         ],
         "content": "In case of the cavitation phenomenon, Fluent software offers three homogeneous models which are available from the interface: Schnerr and Sauer model, Zwart model and Singhal model. Fluent gives users also the possibility to have a control over the phenomenon through UDFs (Used Defined Functions) which can be implemented using macro Define Cavitation Rate. Making the own versions of homogeneous models should be preceded by verification of the prepared tools. The simplest form of verification is comparison of the results obtained using the same models from the interface and UDFs. The model used in comparisons should be universally available for the Fluent users, like the model from the well-known cavitation tutorial. The poster presents the comparison of the results obtained using cavitation models from the interface and UDFs. The aim of the poster is evaluation of the correctness of the UDFs form. The motivation is intension to use the UDFs to validation of experimental investigations.",
-        "image": null,
-        "image_squared": null,
-        "image_caption": ""
-    },
-    {
-        "abstract_number": 132,
-        "abstract_submitted": "2016-04-30 23:57:53",
-        "abstract_status": "accepted:poster3",
-        "registration_number": 89,
-        "registration_submitted": "2016-05-16 12:50:04",
-        "registration_status": "payment_accepted",
-        "gender_title": "Mr.",
-        "first_name": "Sanjay",
-        "last_name": "Singh",
-        "email": "singhs71@uni.coventry.ac.uk",
-        "degree": "M.Sc.",
-        "org": "Coventry University",
-        "dept": "Applied Mathematics Research Centre, Faculty of Engineering & Computing",
-        "country": "United Kingdom",
-        "country_code": "GB",
-        "is_poster": true,
-        "is_oral": false,
-        "want_publication": true,
-        "title": "Experimental study of a turbulent jet in a linearly stratified flow",
-        "keywords": [
-            "Geophysical flows",
-            "Turbulence",
-            "Experimental techniques"
-        ],
-        "authors": [
-            {
-                "name": "Joel Sommeria",
-                "affil": "Laboratory of Geophysical and Industrial Flows (LEGI), Grenoble, France",
-                "affil_id": 0
-            },
-            {
-                "name": "Sanjay Singh",
-                "affil": "Applied Mathematics Research Centre, Coventry University, Coventry, U.K",
-                "affil_id": 1
-            },
-            {
-                "name": "Pierre Augier",
-                "affil": "Laboratory of Geophysical and Industrial Flows (LEGI), Grenoble, France",
-                "affil_id": 0
-            },
-            {
-                "name": "Samuel Viboud",
-                "affil": "Laboratory of Geophysical and Industrial Flows (LEGI), Grenoble, France",
-                "affil_id": 0
-            }
-        ],
-        "affils": [
-            "Laboratory of Geophysical and Industrial Flows (LEGI), Grenoble, France",
-            "Applied Mathematics Research Centre, Coventry University, Coventry, U.K"
-        ],
-        "content": "The study of horizontal turbulent jet in stratified fluid has applications in geophysical and industrial flows. Experiments were performed on the Coriolis platform using a multi-level PIV in the vertical and horizontal plane, along with conductivity probes to study the characteristics of a round horizontal turbulent jet issuing into a linear density-stratified ambient fluid in the post-collapse regime. The time resolved measurements from PIV show that the mean streamwise horizontal velocity along the center-line of the jet increased along the flow, and the growth of the half-width of the jet both in the vertical and horizontal appeared inhibited due to stratification. The evidence of entrainment observed from the mean of the transverse velocity component is found to be consistent with the increasing flow rates determined along the flow, however the jet entrains at a reduced rate downstream of the flow.",
         "image": null,
         "image_squared": null,
         "image_caption": ""
