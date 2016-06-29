@@ -3046,7 +3046,7 @@
         "is_poster": false,
         "is_oral": true,
         "want_publication": false,
-        "title": "numerical simulations of oxygen-nutrient transport in the anterior chamber with and without a pIOL",
+        "title": "Numerical simulations of oxygen-nutrient transport in the anterior chamber with and without a pIOL",
         "keywords": [
             "Biofluids",
             "Computational methods",
@@ -4008,7 +4008,7 @@
         "affils": [
             "Institute for Atmospheric Physics (IPA), Johannes Gutenberg University Mainz"
         ],
-        "content": "A simple ice cloud model is coupled with the Navier-Stokes equations. \\\\The cloud model includes an analytically simple description of the rate\\\\for homogeneous ice nucleation. The methods of multiscale asymptotic\\\\analysis are used to identify dominant processes in a large-scale regime\\\\coupled with small disturbances. This is applied to an idealized\\\\scenario of subvisible cirrus with very slow uplift. These are ice\\\\clouds that very frequently occur in the tropopause region with an\\\\optical depth lower than 0.03 and a very low ice crystal number\\\\concentration. The analysis is compared with a dynamical system approach\\\\considered in the article under discussion \\textit{Subvisible cirrus clouds - a}\\\\\\textit{dynamical system approach}, (Spreitzer et al., NPGD 2016).",
+        "content": "A simple ice cloud model is coupled with the Navier-Stokes equations.  The cloud model includes an analytically simple description of the rate for homogeneous ice nucleation. The methods of multiscale asymptotic analysis are used to identify dominant processes in a large-scale regime coupled with small disturbances. This is applied to an idealized scenario of subvisible cirrus with very slow uplift. These are ice clouds that very frequently occur in the tropopause region with an optical depth lower than 0.03 and a very low ice crystal number concentration. The analysis is compared with a dynamical system approach considered in the article under discussion \\textit{Subvisible cirrus clouds - a}\\textit{dynamical system approach}, (Spreitzer et al., NPGD 2016).",
         "image": null,
         "image_squared": null,
         "image_caption": ""
@@ -4077,7 +4077,7 @@
         "is_poster": true,
         "is_oral": false,
         "want_publication": false,
-        "title": "an experimental study of horizontal convection",
+        "title": "An experimental study of horizontal convection",
         "keywords": [
             "Convection",
             "Geophysical flows"
