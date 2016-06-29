@@ -79,7 +79,7 @@ def fill_template(opts):
             
             \\begin{minipage}[c]{\\textwidth}
                 \centering
-                \\includegraphics[width=7cm,height=7cm,keepaspectratio]{""" + imagefile + """}
+                \\includegraphics[height=7cm,width=7cm,keepaspectratio]{""" + imagefile + """}
             
                 { \\textbf{Figure: }\\input{""" + captionfile + """ }}
             \\end{minipage}
