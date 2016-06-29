@@ -22,16 +22,15 @@ def fill_template(opts):
     \stepcounter{Abstractcounter} %counter increase
     % formatting table of contents entry    
     \\addcontentsline{toc}{section} 
-    { \\arabic{Abstractcounter} \\textsc{""" + title + """} \\\\
+    { \\arabic{Abstractcounter} \n\t\t\t{""" + title + """} \\\\ \t\t\t
     \\normalfont\small """ + author + """ }
     % end -- formatting table of contents entry 
     """
     
-#    buffer = buffer + """
-#    \\begin{minipage}[c]{\\textwidth}
-#    { \centering{ \\textsc{ \\textbf{ \large{\\arabic{Abstractcounter} """ + title +"""}} } } \\\\    
-#    } 
-#    """
+    buffer = buffer + """
+    { \centering{ \\textsc{ \\textbf{ \large{\\arabic{Abstractcounter} """ + title +"""}} } } \\\\    
+    } 
+    """
     
 #    buffer = buffer + """  { \centering{ \\textbf{ """ + author + """}} \\\\  
 #    } """
@@ -40,16 +39,16 @@ def fill_template(opts):
     for i,val in enumerate( opts['authors']):
         affilid = opts['authorsaffilid'][i]
         
-        names = names + val
+        names = names + '\n\t\t\t\t'+val
         
         if ( len( opts['affilname'] ) != 1):
             texsuperscript = '\\textsuperscript'
             names = names + texsuperscript + str(affilid+1) 
-        names = names + ', '
+        names = names + ','
         
-    names = names[:-2] #cutting out ending comma 
+    names = names[:-1] #cutting out ending comma 
     
-    buffer = buffer + """  { \centering{ \\textbf{ """ + names + """}} \\\\ } 
+    buffer = buffer + """  { \centering{ \\textbf{ """ + names + """} \\\\ 
     """
     buffer = buffer + '\\blfootnote{Corresponding author: ' + author + ', '
     buffer = buffer + 'e-mail: \href{mailto:' + email +'}{'+email.replace('_','\_') +'} }\n'
@@ -60,10 +59,11 @@ def fill_template(opts):
         if ( len( opts['affilname'] ) != 1):
                 affil = str(i+1) + ' '
         affil = affil + val 
-        buffer = buffer + """  { \centering{ { """ + affil + """}} \\\\ } 
-    """
+        buffer = buffer + """  """ + affil + """ \\\\ 
+"""
     
-    buffer = buffer + '\\vspace{.3cm} \n' #extra space after affiliation data
+    buffer = buffer + '\t} } \n'
+    buffer = buffer + '\t\\vspace{.3cm} \n' #extra space after affiliation data
     
     buffer = buffer + """ \\input{ """ + contentfile + """}    \\\\
     """
@@ -156,7 +156,9 @@ def run(data):
             inputcmd = '\input{'+ outfile +'}'
             print(inputcmd,file=fout)
 
-            
+def printfield(data,key):
+    for i,val in enumerate(data):
+        print(i, val[key])
             
 if __name__ == '__main__':
     print('###############################')
@@ -168,3 +170,4 @@ if __name__ == '__main__':
     data = readabstracts('abstracts.json')
     
     run(data)
+    

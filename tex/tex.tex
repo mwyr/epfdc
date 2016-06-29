@@ -28,7 +28,7 @@
 \usepackage{float}
 \usepackage{pdfpages}
 \usepackage{lastpage}
-\usepackage[hyperfootnotes=false]{hyperref}
+\usepackage[hidelinks,hyperfootnotes=false]{hyperref}
 
 \usepackage{float}
 
@@ -64,6 +64,8 @@
   \endgroup
 }
 
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
 % ========== DOCUMENT ==========
 \begin{document}
 \pagestyle{plain}
@@ -71,6 +73,8 @@
 \title{Book of abstracts}
 \author{8th~EPFDC Organising Committee}
 \maketitle
+
+\input{preface.tex}
 
 \tableofcontents
 \newpage 
