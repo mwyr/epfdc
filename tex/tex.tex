@@ -29,7 +29,7 @@
 \usepackage{pdfpages}
 \usepackage{lastpage}
 \usepackage[hidelinks,hyperfootnotes=false]{hyperref}
-
+\usepackage{pdfpages} %%including pdf for title page
 \usepackage{float}
 
 % ========== fancy header page definition ==========
@@ -70,9 +70,10 @@
 \begin{document}
 \pagestyle{plain}
 
-\title{Book of abstracts}
-\author{8th~EPFDC Organising Committee}
-\maketitle
+%\title{Book of abstracts}
+%\author{8th~EPFDC Organising Committee}
+%\maketitle
+\includepdf{epfdc_title.pdf}
 \newpage 
 
 \input{preface.tex}
