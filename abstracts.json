@@ -501,9 +501,9 @@
             "Plymouth university"
         ],
         "content": "The lattice Boltzmann equation is a relatively new numerical method for simulating fluid flow. Unlike more traditional methods,The LBE is based on a discrete kinetic description of fluid motion in which all nonlinearities are confined to algebraic source terms. This allows LBE to exploit parallel computer architectures. Another advantage of LBM is the ease with which it can incorporate boundary conditions. Boundary conditions for the LBE are usually described in terms of distribution functions. However, this introduces an additional slip error. We present the moment-method which imposes boundary conditions on the moments of the distribution function. This allows for the exact satisfaction of hydrodynamic boundary conditions precisely at gridpoints. The method is used to study the dipole-wall collision problem. We consider both normal and oblique collisions and show that predications fory quantities are in good agreement with benchmark data.",
-        "image": "images/014.jpg",
-        "image_squared": "images/014-squared.jpg",
-        "image_caption": "Seemaa A. Mohammed\n\nPhd student\n\nschool of Computing and Mathematics\n\nPlymouth university ,\n\nUnited Kingdom"
+        "image": null,
+        "image_squared": null,
+        "image_caption": ""
     },
     {
         "abstract_number": 15,
