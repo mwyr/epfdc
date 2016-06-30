@@ -63,7 +63,7 @@ def fill_template(opts):
 """
     
     buffer = buffer + '\t} } \n'
-    buffer = buffer + '\t\\vspace{.3cm} \n' #extra space after affiliation data
+    buffer = buffer + '\t\\vspace{1cm} \n' #extra space after affiliation data
     
     buffer = buffer + """ \\input{ """ + contentfile + """}    \\\\
     """
