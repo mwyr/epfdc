@@ -102,8 +102,8 @@
         "registration_submitted": "2016-04-02 10:08:46",
         "registration_status": "payment_accepted",
         "gender_title": "Mr.",
-        "first_name": "lalaoua",
-        "last_name": "adel",
+        "first_name": "Lalaoua",
+        "last_name": "Adel",
         "email": "lalaouaadel@gmail.com",
         "degree": "M.Sc.",
         "org": "University of Sciences and Technology- Houari Boumediene",
@@ -648,50 +648,6 @@
         "image": null,
         "image_squared": null,
         "image_caption": ""
-    },
-    {
-        "abstract_number": 20,
-        "abstract_submitted": "2016-01-28 12:38:43",
-        "abstract_status": "accepted:poster2",
-        "registration_number": 72,
-        "registration_submitted": "2016-05-10 15:46:45",
-        "registration_status": "payment_accepted",
-        "gender_title": "Mr.",
-        "first_name": "Vladimir",
-        "last_name": "Pimanov",
-        "email": "pimanov-vladimir@yandex.ru",
-        "degree": "M.Sc.",
-        "org": "Lomonosov Moscow State University",
-        "dept": "Institute of Mechanics",
-        "country": "Russia",
-        "country_code": "RU",
-        "is_poster": true,
-        "is_oral": false,
-        "want_publication": true,
-        "title": "Numerical study of turbulent puff approximation in pipe flow",
-        "keywords": [
-            "Turbulence",
-            "pipe flow"
-        ],
-        "authors": [
-            {
-                "name": "Vladimir Pimanov",
-                "affil": "Lomonosov Moscow State University",
-                "affil_id": 0
-            },
-            {
-                "name": "Nikolay Nikitin",
-                "affil": "Lomonosov Moscow State University",
-                "affil_id": 0
-            }
-        ],
-        "affils": [
-            "Lomonosov Moscow State University"
-        ],
-        "content": "Turbulence in pipe flow at low Reynolds numbers appears in form of spatially localized structures, named puffs. As a puff approximation we consider spatially localized relatively periodic state that is unstable and appears on the laminar-turbulent dividing edge {[}Avila at al. Phys. Rev. Lett. 110: 224502, 2013{]}.\n\nWe study the edge state solution numerically. Its main features consists of the pairs of high and low speed streaks elongated along a wall (see figure) and a wave traveling downstream in the center area. These are the key features of the structure self-sustain cycle that will be presented in our talk.\n\nThe work was supported by RFBR, projects No 14-01-00295-a and No 16-31-00522-mol-a. Simulations were conducted using MSU supercomputing complex.",
-        "image": "images/020.png",
-        "image_squared": "images/020-squared.png",
-        "image_caption": "Snapshots of the turbulent puff (top) and the edge state solution (bottom). Isosurfaces of difference between streamwise velocity and laminar flow (red for positive, blue for negative). Flow direction is from left to right."
     },
     {
         "abstract_number": 21,
@@ -2353,7 +2309,7 @@
         "affils": [
             "FACULTY OF PHYSICS, UNIVERSITY OF SCIENCES AND TECHNOLOGY HOUARI BOUMEDIENE"
         ],
-        "content": "\\textit{Mixed convection fluid flow and heat transfer of Bingham fluid in a lid-driven square cavity is numerically investigated.} \\textit{The governing equations are solved numerically using the finite volume method . A parametric study is performed and the effects of the Richardson and Bingham numbers on the flow pattern and heat transfer inside the cavity are investigated. It is found that the mean Nusselt number (Nu) increases with decreasing values of Richardson number for both Newtonian and Bingham fluids. However, Nu values obtained for Bingham fluids are smaller than that obtained in the case of Newtonian fluids with the same nominal value of Richardson number (Ri) due to weakening of convective transport. The mean Nusselt number Nu in the case of Bingham fluids is found to decrease with increasing Bingham number, and, for large values of Bingham number Bn, the value settles to unity ( Nu = 1.0) as heat transfer takes place principally due to thermal conduction.}",
+        "content": "Mixed convection fluid flow and heat transfer of Bingham fluid in a lid-driven square cavity is numerically investigated. The governing equations are solved numerically using the finite volume method . A parametric study is performed and the effects of the Richardson and Bingham numbers on the flow pattern and heat transfer inside the cavity are investigated. It is found that the mean Nusselt number (Nu) increases with decreasing values of Richardson number for both Newtonian and Bingham fluids. However, Nu values obtained for Bingham fluids are smaller than that obtained in the case of Newtonian fluids with the same nominal value of Richardson number (Ri) due to weakening of convective transport. The mean Nusselt number Nu in the case of Bingham fluids is found to decrease with increasing Bingham number, and, for large values of Bingham number Bn, the value settles to unity ( Nu = 1.0) as heat transfer takes place principally due to thermal conduction.",
         "image": null,
         "image_squared": null,
         "image_caption": ""
@@ -3880,51 +3836,6 @@
         "image": "images/124.png",
         "image_squared": "images/124-squared.png",
         "image_caption": "The result of computational modeling. Vortex path after semicircular bodyat Reynolds number Re=50000."
-    },
-    {
-        "abstract_number": 126,
-        "abstract_submitted": "2016-02-15 08:42:50",
-        "abstract_status": "accepted:oral",
-        "registration_number": 16,
-        "registration_submitted": "2016-04-02 22:02:18",
-        "registration_status": "payment_accepted",
-        "gender_title": "Mr.",
-        "first_name": "Viet Anh",
-        "last_name": "Nguyen",
-        "email": "nvietanh242@gmail.com",
-        "degree": "M.Sc.",
-        "org": "University of Rome \"Tor Vergata\"",
-        "dept": "Department of Civil Engineering",
-        "country": "Italy",
-        "country_code": "IT",
-        "is_poster": false,
-        "is_oral": true,
-        "want_publication": true,
-        "title": "Numerical Investigation of effects of changing cardiac cycle length to blood flow over aortic bileaflet mechanical heart valves",
-        "keywords": [
-            "Biofluids",
-            "Applied fluid dynamics",
-            "Computational methods"
-        ],
-        "authors": [
-            {
-                "name": "Viet Anh Nguyen",
-                "affil": "University of Rome \"Tor Vergata\"",
-                "affil_id": 0
-            },
-            {
-                "name": "Roberto Verzicco",
-                "affil": "University of Rome \"Tor Vergata\"",
-                "affil_id": 0
-            }
-        ],
-        "affils": [
-            "University of Rome \"Tor Vergata\""
-        ],
-        "content": "An \\textit{in silico} investigation of Direct Numerical Simulation of bileaflet mechanical heart valves is studied in this work in order to understand the dynamics of bileaflet heart valves in aortic prostheses as well as blood flow properties in a human heart. The modeled valve prosthesis used in the simulation is a St. Jude Medical valves with three sinuses Valsava grafts. The results include essential fluid flow parameters such as instant velocity contours, pressure distribution, turbulent shear stresses along the aortic valve and also angles of the leaflets during complete cycles which are meaningful data to evaluate the blood flow and behavior of the bileaflet under changes in cardiac cycle length within a wide range. From obtained turbulent shear stresses in systolic phase, the mechanical hemolysis of the red blood cells is then studied. Results describe that changes in cycle length strongly affect stability of leaflet dynamics after a large number of cardiac cycles (\\textasciitilde{}30 cycles).",
-        "image": "images/126.jpg",
-        "image_squared": "images/126-squared.jpg",
-        "image_caption": "Velocity profile of the blood flow over the bileaflet mechanical heartvalves during systolic phase at peak inflow rate. The maximum velocity of the flow is 2.7 m/s. (The color scale indicates velocity field at unit m/s)"
     },
     {
         "abstract_number": 127,
