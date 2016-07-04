@@ -2,7 +2,7 @@
 % ========== HEADER ==========
 
 %\documentclass[a4paper,twoside,10pt]{report}
-\documentclass[11pt,a4paper]{article}
+\documentclass[11pt,a4paper]{report}
 %\documentclass[letterpaper,10pt]{article}
 
 \usepackage[polish,english]{babel}
@@ -53,7 +53,7 @@
 
 % ========== abstract entry definition ==========
 \newcounter{Abstractcounter}
-
+\newcounter{Plenarycounter}
 
 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
 
@@ -65,6 +65,17 @@
 }
 
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\renewcommand{\chaptername}{}
+\renewcommand{\thechapter}{}
+
+\makeatletter
+\renewcommand{\@makechapterhead}[1]{%
+\vspace*{50 pt}%
+{\setlength{\parindent}{0pt} \raggedright \normalfont
+\bfseries\Huge\thechapter\ #1
+\par\nobreak\vspace{40 pt}}}
+\makeatother
 
 % ========== DOCUMENT ==========
 \begin{document}
@@ -107,8 +118,8 @@
 \newpage 
 
 \input{scientific_committee}
-\newpage
-%\vspace{2cm}
+%\newpage
+\vspace{2cm}
 
 \input{organising_committee}
 \newpage
@@ -127,17 +138,16 @@
 	\textit{This page intentionally left blank}
 \end{center}
 \newpage
+\chapter{Plenary Lectures}
+\newpage
 
 \input{plenary_falkovich.tex}
 \input{plenary_jasak.tex}
 \input{plenary_smolarkiewicz.tex}
 
-\vfill
-\begin{center}
-	\textit{This page intentionally left blank}
-\end{center}
-\newpage
 
+\chapter{Abstracts}
+\newpage
 \input{myabstracts.tex}
 %\myabstract{tytul}{autor}{ab1.tex}
 %\myabstract{tytul drugi}{drugi autor}{ab1.tex}
