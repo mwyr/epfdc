@@ -1,19 +1,31 @@
     \stepcounter{Plenarycounter} %counter increase
     % formatting table of contents entry    
     \addcontentsline{toc}{section} 
-    { \arabic{Plenarycounter} 
+    { 
+		%\arabic{Plenarycounter} 
 			{All-Scale Finite-Volume Module for Global Weather Prediction} \\
     \normalfont\small Piotr Smolarkiewicz }
     % end -- formatting table of contents entry 
     
-    { \centering{ \textsc{ \textbf{ \large{\arabic{Plenarycounter} All-Scale Finite-Volume Module for Global Weather Prediction }} } } \\    
+    { \centering{ \textsc{ \textbf{ \large{ All-Scale Finite-Volume Module for Global Weather Prediction }} } } \\    
     } 
       { \centering{ \textbf{ 
 				Piotr Smolarkiewicz} \\ 
     %\blfootnote{Corresponding author: Bayode Owolabi, e-mail: \href{mailto:sgbowola@liverpool.ac.uk}{sgbowola@liverpool.ac.uk} }
-  %University of Liverpool, UK. \\ 
+  European Centre for Medium-Range Weather Forecasts (ECMWF), Reading, UK \\ 
 	} } 
 	\vspace{1cm} 
+	\begin{wrapfigure}{r}{4cm}
+		\vspace{-20pt}
+		\begin{center}
+			\includegraphics[width=4cm,height=5cm,keepaspectratio]{invited_img/smolarkiewicz}
+		\end{center}
+		\vspace{-20pt}
+		\vspace{-10pt}
+	\end{wrapfigure}
+	Piotr Smolarkiewicz received his PhD from the University of Warsaw, Poland, in 1980. Afterwards, in 1981, he joined as a post-doctoral fellow the Advanced Study Program at the National Center for Atmospheric Research (NCAR) in Boulder, Colorado. After the postdoctoral appointment, since 1983 he has been a scientist at NCAR, in the rank of Senior Scientist since 1994. In 2005-2006, Smolarkiewicz served as an NCAR Science Advisor, and since 2007 he has been the Head of the Computational Mathematics Group at the Institute for Mathematics Applied to Geosciences (IMAGe) of NCAR. In March 2013 he joined the Research Department of the European Centre for Medium-Range Weather Forecasts (ECMWF) in Reading, UK, as a principal investigator of the PantaRhei project, funded as an Advanced Grant by the European Research Council. Smolarkiewicz's professional interests include scientific computing, geophysical flows of all scales, solar dynamo, physics of plasmas, non-Newtonian fluids, and dynamics of continuous media. His current activities at ECMWF focus on the development of an interdisciplinary forecasting system for simulating multi-scale fluid flows.
+	
+	\section*{Abstract}
 	My lecture highlights the development of a global nonhydrostatic finite-volume module (FVM) designed to enhance established spectral-transform based numerical weather prediction (NWP) models. The state-of-the-art NWP models, such as the Integrated Forecast System (IFS) of ECMWF, produce 10 days forecast, at about nine billion points discretising 85 km deep global atmosphere, in no more than 1 hour of wall-clock time. This extreme efficiency owes to hydrostatic primitive PDEs integrated with a spectral-transform based semi-implicit semi-Lagrangian (SISL) algorithms executed in parallel on nearly eight thousand supercomputer cores. However, this computational apparatus cannot sustain the status quo of global NWP at nonhydrostatic resolutions (anticipated by 2020) by simply scaling up number of cores; Wedi et al. 2015, 760. Recognising the predictive skills of the legacy codes, we seek to mitigate their shortcomings by supplying flexibility in choices of complementary numerical procedures, compact discretisation stencils, local connectivities and communication patterns unavailable in the SISL spectral models. The first step towards realising this paradigm is the development of an autonomous FVM capable of working on the IFS grid, and in principle, on any horizontal grid; Smolarkiewicz et al. 2016. The key technologies of the FVM are numerical procedures expressed in time-dependent generalized curvilinear coordinates, pairing the mathematical apparatus of differential geometry with modern CFD, most notably the emerging novel edge-based non-oscillatory control volume integrators for nonhydrostatic dynamics; Smolarkiewicz et al.. Because FVM operates at the nodes of the IFS grid, it seamlessly inherits the advanced parallelisation scheme of the IFS, with multiple layers of parallelism hybridising MPI tasks and OpenMP threads. Theoretical considerations are illustrated with idealised simulations of global weather.
 	
          

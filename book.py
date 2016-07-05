@@ -28,7 +28,7 @@ def fill_template(opts):
     """
     
     buffer = buffer + """
-    { \centering{ \\textsc{ \\textbf{ \large{\\arabic{Abstractcounter} """ + title +"""}} } } \\\\    
+    { \centering{ \\textsc{ \\textbf{ \large{Abstract \\arabic{Abstractcounter}: """ + title +"""}} } } \\\\    
     } 
     """
     
