@@ -4360,5 +4360,285 @@
         "image": "images/138.png",
         "image_squared": "images/138-squared.png",
         "image_caption": "XY-field of Finite-Time Lyapunov Exponents $\\sigma$ (s ) for different bubbles initial radius R0 and Reynolds numbers. Darker (red) colors indicate larger values."
+    },
+    {
+        "abstract_number": 93,
+        "abstract_submitted": "2016-02-12 16:17:55",
+        "abstract_status": "accepted:oral",
+        "registration_number": 93,
+        "registration_submitted": "2016-02-12 16:17:55",
+        "registration_status": "accepted:oral",
+        "gender_title": "M",
+        "first_name": "Anna",
+        "last_name": "Gorska",
+        "email": "anna.gorska@igf.fuw.edu.pl",
+        "degree": "M",
+        "org": null,
+        "dept": null,
+        "country": null,
+        "country_code": null,
+        "is_poster": false,
+        "is_oral": true,
+        "want_publication": false,
+        "title": "Individual water drop-droplet collisions observed in a laminar flow with holography",
+        "keywords": [
+            "Experimental techniques",
+            "Geophysical flows"
+        ],
+        "authors": [
+            {
+                "name": "Anna Gorska",
+                "affil": "Institute of Geophysics, Faculty of Physics, University of Warsaw, Warsaw, Poland; Particle Chemistry Department, Max Planck Institute for Chemistry, Mainz, Germany",
+                "affil_id": 0
+            },
+            {
+                "name": "Jacob Fugal",
+                "affil": "Particle Chemistry Department, Max Planck Institute for Chemistry, Mainz, Germany; Institute of Atmospheric Physics, Johannes Gutenberg University, Mainz, Germany",
+                "affil_id": 1
+            },
+            {
+                "name": "Subir Mitra",
+                "affil": "Institute of Atmospheric Physics, Johannes Gutenberg University, Mainz, Germany",
+                "affil_id": 2
+            },
+            {
+                "name": "Szymon Malinowski",
+                "affil": "Institute of Geophysics, Faculty of Physics, University of Warsaw, Warsaw, Poland",
+                "affil_id": 3
+            },
+            {
+                "name": "Stephan Borrmann",
+                "affil": "Particle Chemistry Department, Max Planck Institute for Chemistry, Mainz, Germany; Institute of Atmospheric Physics, Johannes Gutenberg University, Mainz, Germany",
+                "affil_id": 1
+            }
+        ],
+        "affils": [
+            "Institute of Geophysics, Faculty of Physics, University of Warsaw, Warsaw, Poland; Particle Chemistry Department, Max Planck Institute for Chemistry, Mainz, Germany",
+            "Particle Chemistry Department, Max Planck Institute for Chemistry, Mainz, Germany; Institute of Atmospheric Physics, Johannes Gutenberg University, Mainz, Germany",
+            "Institute of Atmospheric Physics, Johannes Gutenberg University, Mainz, Germany",
+            "Institute of Geophysics, Faculty of Physics, University of Warsaw, Warsaw, Poland"
+        ],
+        "content": "We investigate collisions of water drop and droplets in a laminar flow in the Mainz vertical wind tunnel by means of in-line holography. We levitate a small rain drop (ca. 550-770 \\(\\mu \\)m) in a vertical stream of cloud droplets (20-70 \\(\\mu \\)m) moving with the terminal velocity of the drop (ca. 3 m/s). We record holographic images with a high speed camera. Processing them allow us to determine sizes and 3D positions of both drop and droplets. Connecting droplets into tracks (up to 6 point tracks) and choosing only tracks in the surrounding of the drop enable to find tracks leading to collisions. We found 106 collisions in a data series of about 50 s. Furthermore, thanks to holography, we are able to characterize the flow, how laminar and uniform it is and determine droplets size distributions and number concentrations and relative and terminal velocities of both. Making this experiment in turbulent conditions will likely be of significance for cloud and climate numerical models.",
+        "image": "images/093.png",
+        "image_squared": "images/093-squared.png",
+        "image_caption": "Position of droplets around the drop in drop-centered and -normalized coordinates in the plane perpendicular to the flow. The scatter of collision positions outside the drop cross-section are due to measurement uncertainty."
+    },
+    {
+        "abstract_number": 96,
+        "abstract_submitted": "2016-02-12 18:10:21",
+        "abstract_status": "accepted:poster",
+        "registration_number": 96,
+        "registration_submitted": "2016-02-12 18:10:21",
+        "registration_status": "accepted:poster",
+        "gender_title": "M",
+        "first_name": "Anna",
+        "last_name": "Gorska",
+        "email": "anna.gorska@igf.fuw.edu.pl",
+        "degree": "M",
+        "org": null,
+        "dept": null,
+        "country": null,
+        "country_code": null,
+        "is_poster": true,
+        "is_oral": false,
+        "want_publication": false,
+        "title": "Anisotropy and entrainment in laboratory analogues of cumulus and stratocumulus clouds",
+        "keywords": [
+            "Turbulence",
+            "Multiphase flows",
+            "Geophysical flows"
+        ],
+        "authors": [
+            {
+                "name": "Anna Gorska",
+                "affil": "Institute of Geophysics, Faculty of Physics, University of Warsaw, Warsaw, Poland; Particle Chemistry Department, Max Planck Institute for Chemistry, Mainz, Germany",
+                "affil_id": 0
+            },
+            {
+                "name": "Szymon Malinowski",
+                "affil": "Institute of Geophysics, Faculty of Physics, University of Warsaw, Warsaw, Poland; Institute of Atmospheric Physics, Johannes Gutenberg University, Mainz, Germany",
+                "affil_id": 1
+            },
+            {
+                "name": "Jacob Fugal",
+                "affil": "Particle Chemistry Department, Max Planck Institute for Chemistry, Mainz, Germany; Institute of Atmospheric Physics, Johannes Gutenberg University, Mainz, Germany",
+                "affil_id": 2
+            },
+            {
+                "name": "Wojciech Kumala",
+                "affil": "Institute of Geophysics, Faculty of Physics, University of Warsaw, Warsaw, Poland",
+                "affil_id": 3
+            }
+        ],
+        "affils": [
+            "Institute of Geophysics, Faculty of Physics, University of Warsaw, Warsaw, Poland; Particle Chemistry Department, Max Planck Institute for Chemistry, Mainz, Germany",
+            "Institute of Geophysics, Faculty of Physics, University of Warsaw, Warsaw, Poland; Institute of Atmospheric Physics, Johannes Gutenberg University, Mainz, Germany",
+            "Particle Chemistry Department, Max Planck Institute for Chemistry, Mainz, Germany; Institute of Atmospheric Physics, Johannes Gutenberg University, Mainz, Germany",
+            "Institute of Geophysics, Faculty of Physics, University of Warsaw, Warsaw, Poland"
+        ],
+        "content": "We use Particle Image Velocimetry to investigate turbulent mixing at the tops of cumulus and stratocumulus clouds simulated in a laboratory cloud chamber. Retrieving 2D velocity fields in a plane cut through the cloud tops allows us to characterize geometries of entraining structures and their differences in both cases and estimating turbulence anisotropy helps to understand entrainment process. With the use of image processing we are able to trace the cloud-clear air interface and calculation of velocity differences across this interface leads to the estimation of local entrainment / detrainment rates.",
+        "image": null,
+        "image_squared": null,
+        "image_caption": ""
+    },
+    {
+        "abstract_number": 119,
+        "abstract_submitted": "2016-02-14 19:31:03",
+        "abstract_status": "accepted:oral",
+        "registration_number": 119,
+        "registration_submitted": "2016-02-14 19:31:03",
+        "registration_status": "accepted:oral",
+        "gender_title": "M",
+        "first_name": "Katarzyna",
+        "last_name": "Karpińska",
+        "email": "obikaa@gmail.com",
+        "degree": "M",
+        "org": null,
+        "dept": null,
+        "country": null,
+        "country_code": null,
+        "is_poster": false,
+        "is_oral": true,
+        "want_publication": false,
+        "title": "Omitted turbulent mechanism leading to preferential concentration in clouds",
+        "keywords": [
+            "Multiphase flows",
+            "Turbulence",
+            "Geophysical flows"
+        ],
+        "authors": [
+            {
+                "name": "Katarzyna Karpinska",
+                "affil": "University of Warsaw, Faculty of Physics, Institute of Geophysics",
+                "affil_id": 0
+            },
+            {
+                "name": "Szymon P. Malinowski",
+                "affil": "University of Warsaw, Faculty of Physics, Institute of Geophysics",
+                "affil_id": 0
+            }
+        ],
+        "affils": [
+            "University of Warsaw, Faculty of Physics, Institute of Geophysics"
+        ],
+        "content": "Many studies attribute the evolution of droplet size distribution in warm convective clouds to enhancement of collision-coalescence by turbulence. One of the phenomena in which turbulence manifests its influence on droplet spatial distribution is preferential concentration. Majority of research about preferential concentration focus on the statistical analysis though. Such approach obscures some dynamical effects important for better understanding cloud microphysics. One of them is droplets response to presence of vortex tubes considered the smallest elements of turbulence. In this study we examine motion of inertial, heavy droplets in theoretical models of such tubes aligned at arbitrary angle to the direction of gravity. Both analytical calculations and numerical simulations demonstrate characteristic features of droplet motion in plane perpendicular to the vortex axis, such as gathering in regions attributed to equilibrium points, limit cycles or stable, periodic orbits.",
+        "image": null,
+        "image_squared": null,
+        "image_caption": ""
+    },
+    {
+        "abstract_number": 103,
+        "abstract_submitted": "2016-02-13 21:31:28",
+        "abstract_status": "accepted:oral",
+        "registration_number": 103,
+        "registration_submitted": "2016-02-13 21:31:28",
+        "registration_status": "accepted:oral",
+        "gender_title": "M",
+        "first_name": "Michal",
+        "last_name": "Remer",
+        "email": "mremer@meil.pw.edu.pl",
+        "degree": "M",
+        "org": null,
+        "dept": null,
+        "country": null,
+        "country_code": null,
+        "is_poster": false,
+        "is_oral": true,
+        "want_publication": true,
+        "title": "Dynamic contact angle of water droplet on superhydrophobic surfaces",
+        "keywords": [
+            "Multiphase flows",
+            "Experimental techniques",
+            "Droplets"
+        ],
+        "authors": [
+            {
+                "name": "Michal Remer",
+                "affil": "Institute of Aeronautics and Applied Mechanics, Departament of Aerodynamics, Warsaw University of Technology",
+                "affil_id": 0
+            },
+            {
+                "name": "Kacper Stasiuk",
+                "affil": "Institute of Aeronautics and Applied Mechanics, Departament of Aerodynamics, Warsaw University of Technology",
+                "affil_id": 0
+            },
+            {
+                "name": "Grzegorz Sobieraj",
+                "affil": "Institute of Aeronautics and Applied Mechanics, Departament of Aerodynamics, Warsaw University of Technology",
+                "affil_id": 0
+            },
+            {
+                "name": "Jacek Rokicki",
+                "affil": "Institute of Aeronautics and Applied Mechanics, Departament of Aerodynamics, Warsaw University of Technology",
+                "affil_id": 0
+            },
+            {
+                "name": "Konrad Gumowski",
+                "affil": "Institute of Aeronautics and Applied Mechanics, Departament of Aerodynamics, Warsaw University of Technology",
+                "affil_id": 0
+            },
+            {
+                "name": "Beata Stańczyk",
+                "affil": "Institute of Electronic Materials Technology",
+                "affil_id": 1
+            },
+            {
+                "name": "Lech Dobrzański",
+                "affil": "Institute of Electronic Materials Technology",
+                "affil_id": 1
+            }
+        ],
+        "affils": [
+            "Institute of Aeronautics and Applied Mechanics, Departament of Aerodynamics, Warsaw University of Technology",
+            "Institute of Electronic Materials Technology"
+        ],
+        "content": "Presented workinvestigates and analyses dynamic contact of droplet at super-hydrophobic surfaces with a regular first order structure.Two silicon surfaces are investigated, differ only inthe nanostructure. Test stand equipped with fast camera and in-house software eligible to obtain repetability and knowledge about the physical parameters of droplets. Droplet impact were carried for different experimental cases.The crucial quantities - contact angle and maximal diameter of droplet, are obtained.Dynamic contact angle change have been confirmed. Modifications of the nanostructure in that surfaces, influence dropletimpact phenomena.",
+        "image": null,
+        "image_squared": null,
+        "image_caption": ""
+    },
+    {
+        "abstract_number": 68,
+        "abstract_submitted": "2016-02-03 12:42:25",
+        "abstract_status": "accepted:oral",
+        "registration_number": 68,
+        "registration_submitted": "2016-02-03 12:42:25",
+        "registration_status": "accepted:oral",
+        "gender_title": "M",
+        "first_name": "Marcin",
+        "last_name": "Wyrozębski",
+        "email": "mwyrozebski@meil.pw.edu.pl",
+        "degree": "M",
+        "org": null,
+        "dept": null,
+        "country": null,
+        "country_code": null,
+        "is_poster": false,
+        "is_oral": true,
+        "want_publication": true,
+        "title": "Efficient Usage of 2nd Order Sensitivity for Uncertainty Quantification",
+        "keywords": [
+            "Aerodynamics",
+            "Computational methods"
+        ],
+        "authors": [
+            {
+                "name": "Marcin Wyrozębski",
+                "affil": "Institute of Aeronautics and Applied Mechanics",
+                "affil_id": 0
+            },
+            {
+                "name": "Łukasz Łaniewski-Wołłk",
+                "affil": "Institute of Aeronautics and Applied Mechanics",
+                "affil_id": 0
+            }
+        ],
+        "affils": [
+            "Institute of Aeronautics and Applied Mechanics"
+        ],
+        "content": "We propose a method based on nodal representation of continuous geometrical uncertainty field. Such discretization leads to a large set of correlated uncertainties. Number of resultant uncertainties is too big to be analyzed with existing methods in reasonable time.\n\nThe proposed approach is based on the idea of reducing the number of analyzed uncertainties, maintaining at the same time high approximation accuracy. In order to do this one needs to compute directional 2nd order derivatives. This derivatives can be easily calculated with algorithms like tangent-on-reverse. It is expected that this approach will give significant gain in computational time.",
+        "image": null,
+        "image_squared": null,
+        "image_caption": ""
     }
 ]
