@@ -169,5 +169,8 @@ if __name__ == '__main__':
     
     data = readabstracts('abstracts.json')
     
+    #sort json
+    data = sorted(data, key=lambda k: k['last_name'], reverse=False)
+    
     run(data)
     
