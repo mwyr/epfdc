@@ -4506,7 +4506,7 @@
         "is_poster": false,
         "is_oral": true,
         "want_publication": false,
-        "title": "Omitted turbulent mechanism leading to preferential concentration in clouds",
+        "title": "Preferential concentration in cloud turbulence analyzed via motion of heavy, inertial particles in small vortices",
         "keywords": [
             "Multiphase flows",
             "Turbulence",
@@ -4527,7 +4527,7 @@
         "affils": [
             "University of Warsaw, Faculty of Physics, Institute of Geophysics"
         ],
-        "content": "Many studies attribute the evolution of droplet size distribution in warm convective clouds to enhancement of collision-coalescence by turbulence. One of the phenomena in which turbulence manifests its influence on droplet spatial distribution is preferential concentration. Majority of research about preferential concentration focus on the statistical analysis though. Such approach obscures some dynamical effects important for better understanding cloud microphysics. One of them is droplets response to presence of vortex tubes considered the smallest elements of turbulence. In this study we examine motion of inertial, heavy droplets in theoretical models of such tubes aligned at arbitrary angle to the direction of gravity. Both analytical calculations and numerical simulations demonstrate characteristic features of droplet motion in plane perpendicular to the vortex axis, such as gathering in regions attributed to equilibrium points, limit cycles or stable, periodic orbits.",
+        "content": "Many studies attribute the evolution of droplet size distribution in warm convective clouds to enhancement of collision-coalescence by turbulence. One of the phenomena in which turbulence manifests its influence on droplet spatial distribution is preferential concentration. Majority of research about preferential concentration focus on the statistical analysis though. Such approach obscures some dynamical effects important for better understanding cloud microphysics. One of them is droplets response to presence of vortex tubes considered the smallest elements of turbulence. In this study we examine characteristic features of motion of inertial, heavy droplets in theoretical models of such tubes aligned at arbitrary angle to the direction of gravity. The numerical model is used to simulate real cloud observation phenomenon in form of so called „swiss cheese clouds''.",
         "image": null,
         "image_squared": null,
         "image_caption": ""
